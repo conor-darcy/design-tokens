@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/conor-darcy/design-tokens/issues"
   },
-  "homepage": "https://github.com/conor-darcy/design-tokens#readme"
+  "homepage": "https://github.com/conor-darcy/design-tokens#readme",
+  "publishConfig": {
+    "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
+  }
 }
