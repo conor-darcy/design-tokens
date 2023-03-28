@@ -20,9 +20,9 @@ jobs:
       - run: |
           mkdir dist
           cp -R build dist
-      - run: cd dist/build && ls
       - run: npm version --minor
+      - run: cp package.json dist
       - run: npm ci
-      - run: npm publish
+      - run: npm publish ./dist
         env:
           NODE_AUTH_TOKEN: ${{secrets.DESIGNTOKENS_TOKEN}}
