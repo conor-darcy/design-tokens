@@ -18,6 +18,7 @@ jobs:
       - run: npm run tokens.build
         env:
           NODE_AUTH_TOKEN: ${{secrets.DESIGNTOKENS_TOKEN}}
+      - run: ls
 
   publish-gpr:
     needs: build
