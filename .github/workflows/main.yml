@@ -17,6 +17,9 @@ jobs:
       - run: npm install
       - run: npm run tokens.transform
       - run: npm run tokens.build
+      - run: |
+          mkdir dist
+          cp -R build dist
       - run: ls
       - run: npm ci
       - run: npm publish
