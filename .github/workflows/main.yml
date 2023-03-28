@@ -20,7 +20,7 @@ jobs:
       - run: |
           mkdir dist
           cp -R build dist
-      - run: ls
+      - run: cd dist && ls
       - run: npm version --minor
       - run: npm ci
       - run: npm publish
