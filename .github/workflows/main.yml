@@ -16,12 +16,8 @@ jobs:
       - run: npm install
       - run: npm run tokens.transform
       - run: npm run tokens.build
-      - run: |
-          mkdir build-directory
-          cp -R build build-directory
       - run: ls
       - run: npm ci
-      - run: npm publish ./build-directory
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.DESIGNTOKENS_TOKEN}}
-      - run: ls
