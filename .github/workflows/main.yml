@@ -33,7 +33,8 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
       - name: Copy build folder to new directory
-        run: |
+        run: ls
+      - run: |
           mkdir build-directory
           cp -R build build-directory
       - run: ls
