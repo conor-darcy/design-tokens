@@ -36,6 +36,7 @@ jobs:
         run: |
           mkdir build-directory
           cp -R build build-directory
+      - run: ls
       - run: npm ci
       - run: npm publish ./build-directory
         env:
