@@ -13,10 +13,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: https://registry.npmjs.org/
+          registry-url: https://npm.pkg.github.com/
       - run: npm install
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.DESIGNTOKENS_TOKEN}}
       - run: npm run tokens.transform
       - run: npm run tokens.build
 
