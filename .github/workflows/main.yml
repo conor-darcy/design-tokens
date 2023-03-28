@@ -32,7 +32,12 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
+      - name: Copy build folder to new directory
+        run: |
+          mkdir build-directory
+          cp -R build build-directory
       - run: npm ci
       - run: npm publish ./build-directory
         env:
           NODE_AUTH_TOKEN: ${{secrets.DESIGNTOKENS_TOKEN}}
+      - run: ls
