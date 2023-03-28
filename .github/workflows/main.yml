@@ -17,6 +17,7 @@ jobs:
       - run: npm install
       - run: npm run tokens.transform
       - run: npm run tokens.build
+      - run: npm version patch -m "Bump version to %s"
       - run: |
           mkdir dist
           cp -R build dist
