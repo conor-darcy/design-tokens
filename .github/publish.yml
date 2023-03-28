@@ -1,23 +1,40 @@
-name: "publish"
+name: Build and Release Tokens Package
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
-  release:
-    name: publish
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: node
-        uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org
-      - name: publish
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+          node-version: "14.x"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tokens.transform
+        run: npm run tokens.transform
+
+      - name: Run tokens.build
+        run: npm run tokens.build
+
+      - name: Publish package to GitHub Packages
+        uses: guillaumearm/github-push-action@v1.2.2
+        with:
+          directory: "build"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: "main"
+          tag: ${{ github.ref }}
+          tag_name: "v${{ env.npm_package_version }}"
+          commit_user_name: "GitHub Actions"
+          commit_user_email: "actions@github.com"
+          commit_message: "Release v${{ env.npm_package_version }}"
