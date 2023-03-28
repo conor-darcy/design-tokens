@@ -1,10 +1,12 @@
 {
-  "name": "design-tokens",
+  "name": "@conor-darcy/design-tokens",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "exit 0"
+    "test": "exit 0",
+    "tokens.transform": "npx token-transformer tokens.json output.json global",
+    "tokens.build": "style-dictionary build"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,11 @@
   "homepage": "https://github.com/conor-darcy/design-tokens#readme",
   "publishConfig": {
     "@conor-darcy:registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "token-transformer": "^0.0.30"
+  },
+  "devDependencies": {
+    "style-dictionary": "^3.7.2"
   }
 }

@@ -1,0 +1,38 @@
+{
+  "source": ["output.json"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "scss",
+      "prefix": "gux",
+      "buildPath": "build/scss/",
+      "files": [
+        {
+          "destination": "_variables.scss",
+          "format": "scss/variables"
+        }
+      ]
+    },
+    "less": {
+      "transformGroup": "less",
+      "prefix": "gux",
+      "buildPath": "build/less/",
+      "files": [
+        {
+          "destination": "_variables.less",
+          "format": "less/variables"
+        }
+      ]
+    },
+    "css": {
+      "transformGroup": "css",
+      "prefix": "gux",
+      "buildPath": "build/css/",
+      "files": [
+        {
+          "destination": "_variables.css",
+          "format": "css/variables"
+        }
+      ]
+    }
+  }
+}
