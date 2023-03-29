@@ -27,8 +27,5 @@
   },
   "devDependencies": {
     "style-dictionary": "^3.7.2"
-  },
-  "directories": {
-    "dist": "dist"
   }
 }
