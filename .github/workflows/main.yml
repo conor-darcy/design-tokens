@@ -19,8 +19,8 @@ jobs:
       - run: npm run tokens.build
       - run: |
           mkdir dist
-          cp -R build dist
-      - run: npm version minor
+          cp -R build/* dist
+      - run: npm version minor --force
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.DESIGNTOKENS_TOKEN}}
