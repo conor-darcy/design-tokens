@@ -7,7 +7,7 @@
     "test": "exit 0",
     "tokens.transform": "npx token-transformer tokens.json output.json global",
     "tokens.build": "style-dictionary build",
-    "tokens.release": "npm run tokens.transform && npm run tokens.build && mkdir dist && cp -R build/* dist && npm version minor --force && npm publish dist"
+    "tokens.release": "npm run tokens.transform && npm run tokens.build && mkdir dist && cp -R build/* dist && npm version minor --force && npm publish"
   },
   "repository": {
     "type": "git",

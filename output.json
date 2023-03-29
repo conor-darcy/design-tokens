@@ -1,6 +1,10 @@
 {
   "2023": {
     "Core": {
+      "test": {
+        "value": "green",
+        "type": "color"
+      },
       "White": {
         "value": "#ffffff",
         "type": "color"

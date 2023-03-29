@@ -57,14 +57,14 @@ module.exports = {
         },
       ],
     },
-    typgrphy: {
-      buildPath: "build/css/",
-      files: [
-        {
-          destination: "typgrphy.css",
-          format: "css/classFormat",
-        },
-      ],
-    },
+    // typgrphy: {
+    //   buildPath: "build/css/",
+    //   files: [
+    //     {
+    //       destination: "typgrphy.css",
+    //       format: "css/classFormat",
+    //     },
+    //   ],
+    // },
   },
 };
