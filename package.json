@@ -1,6 +1,6 @@
 {
   "name": "@conor-darcy/design-tokens",
-  "version": "0.0.12",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,6 @@
     "style-dictionary": "^3.7.2"
   },
   "directories": {
-    "dist": "dist"
+    "dist": "/dist/"
   }
 }
