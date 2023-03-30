@@ -21,7 +21,7 @@ jobs:
       - run: |
           mkdir dist
           cp -R build/* dist
-      - run: cd dist && ls
+      - run: npm version minor
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.DESIGNTOKENS_TOKEN}}
