@@ -23,7 +23,8 @@
     "@conor-darcy:registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
-    "token-transformer": "^0.0.30"
+    "token-transformer": "^0.0.30",
+    "version": "^0.1.2"
   },
   "devDependencies": {
     "style-dictionary": "^3.7.2"
