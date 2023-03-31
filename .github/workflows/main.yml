@@ -18,10 +18,10 @@ jobs:
       - run: npm run tokens.transform
       - run: npm run tokens.build
       - run: ls
-      - run: git status
       - run: |
           mkdir dist
           cp -R build/* dist
+      - run: git status
       - run: ls
       - run: npm version patch
       - run: npm publish
