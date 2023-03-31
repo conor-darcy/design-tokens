@@ -1,6 +1,5 @@
 node_modules/
 /build/
-output.json
 package-lock.json
 .idea/
 .vscode/
