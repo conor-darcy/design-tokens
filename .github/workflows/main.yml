@@ -18,9 +18,12 @@ jobs:
       - run: npm run tokens.transform
       - run: npm run tokens.build
       - run: git status
-      - run: npm version
-      - run: npm version patch
-      - run: npm version
+      - name: "Automated Version Bump"
+        uses: "phips28/gh-action-bump-version@master"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          version-type: "minor"
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.DESIGNTOKENS_TOKEN }}
