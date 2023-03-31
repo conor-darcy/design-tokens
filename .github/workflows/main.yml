@@ -18,6 +18,7 @@ jobs:
       - run: npm run tokens.transform
       - run: npm run tokens.build
       - run: ls
+      - run: git status
       - run: |
           mkdir dist
           cp -R build/* dist
@@ -25,4 +26,4 @@ jobs:
       - run: npm version patch
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.DESIGNTOKENS_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
