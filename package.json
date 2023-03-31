@@ -28,5 +28,8 @@
   },
   "devDependencies": {
     "style-dictionary": "^3.7.2"
-  }
+  },
+  "files": [
+    "build/**/*"
+  ]
 }
