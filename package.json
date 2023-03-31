@@ -1,13 +1,13 @@
 {
   "name": "@conor-darcy/design-tokens",
-  "version": "0.3.0",
+  "version": "0.0.17",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "exit 0",
-    "tokens.transform": "npx token-transformer tokens.json output.json global",
+    "tokens.transform": "npx token-transformer tokens.json build/tokens.json global",
     "tokens.build": "style-dictionary build",
-    "tokens.release": "npm run tokens.transform && npm run tokens.build && mkdir dist && cp -R build/* dist && npm version minor --force && npm publish"
+    "tokens.release": "npm run tokens.transform && npm run tokens.build && mkdir dist && cp -R build/* dist && npm version minor && npm publish"
   },
   "repository": {
     "type": "git",

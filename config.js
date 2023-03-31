@@ -22,7 +22,7 @@ StyleDictionary.registerFormat({
 });
 
 module.exports = {
-  source: [`output.json`],
+  source: [`build/tokens.json`],
   platforms: {
     scss: {
       transformGroup: "scss",
