@@ -20,7 +20,7 @@ jobs:
       - run: git status
       - run: npm version
       - run: npm version patch
-       - run: npm version
+      - run: npm version
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.DESIGNTOKENS_TOKEN }}
