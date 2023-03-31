@@ -26,7 +26,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           version-type: "patch"
-      - run: cd build/css && ls
+      - run: npx npm-packlist
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.DESIGNTOKENS_TOKEN }}
