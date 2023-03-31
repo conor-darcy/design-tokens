@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
-      - run: npm install
+      - run: npm ci
       - run: npm run tokens.transform
       - run: npm run tokens.build
       - run: ls
