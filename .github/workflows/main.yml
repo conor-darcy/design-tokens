@@ -19,7 +19,6 @@ jobs:
       - run: npm install
       - run: npm run tokens.transform
       - run: npm run tokens.build
-      - run: git status
       - name: "Automated Version Bump"
         uses: "phips28/gh-action-bump-version@master"
         env:
